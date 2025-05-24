@@ -5,6 +5,7 @@
   "author": "Incluud",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@8.15.4",
   "homepage": "https://accessible-astro.netlify.app/",
   "scripts": {
     "dev": "astro dev",
