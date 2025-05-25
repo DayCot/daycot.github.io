@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
+import googleBadge from '../assets/images/google_badge_173x35px.png'
+import appleBadge from '../assets/images/apple_badge.svg'
 
 /**
  * Hero Component
@@ -14,7 +16,7 @@ interface Props {
   src?: string
 }
 
-const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
+const { src = '/maru-character.png' }: Props = Astro.props
 ---
 
 <section class="hero my-24">
@@ -22,17 +24,15 @@ const { src = '/astronaut-hero-img.webp' }: Props = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+          <slot><span class="text-gradient">DayCot</span> Your daily coding habbit</slot>
         </h1>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/incluud/accessible-astro-starter">
-            <Icon name="lucide:star" />
-            Star on GitHub
+        <div class="flex flex-col gap-3 min-[500px]:flex-row items-center justify-center">
+          <a class="has-icon" href="https://apps.apple.com/app/id6744296925">
+            <Image src={appleBadge} alt="Apple Badge" width="173" height="57" />
           </a>
-          <a class="button has-icon color-secondary" href="https://accessible-astro.incluud.dev/">
-            <Icon name="lucide:bookmark" />
-            Read the docs
-          </a>
+          <!-- <a class="has-icon center" href="https://accessible-astro.incluud.dev/">
+            <Image src={googleBadge} alt="Google Badge" width="173" height="57" />
+          </a> -->
         </div>
       </div>
       <Image class="hidden lg:block" src={src} alt="" decoding="async" width={800} height={600} loading="eager" />

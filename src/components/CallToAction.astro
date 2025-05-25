@@ -1,5 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components'
+import appleBadge from '../assets/images/apple_badge.svg'
+import googleBadge from '../assets/images/google_badge_173x35px.png'
+import { Image } from 'astro:assets'
 
 /**
  * CallToAction Component
@@ -25,8 +27,8 @@ interface Props {
 }
 
 const {
-  title = 'Get this theme on GitHub',
-  link = 'https://github.com/incluud/accessible-astro-starter',
+  title = 'Available now',
+  link = 'https://apps.apple.com/app/id6744296925',
   linkText = 'Use this theme',
 } = Astro.props
 ---
@@ -34,10 +36,14 @@ const {
 <div class="container">
   <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl px-12 py-20 md:px-24">
     <h2 class="text-center text-3xl md:text-6xl">{title}</h2>
-    <a href={link} class="text-center text-2xl">
-      {linkText}
-      <Icon name="lucide:arrow-right" />
-    </a>
+    <div class="flex flex-col gap-3 min-[500px]:flex-row items-center justify-center">
+      <a class="has-icon" href="https://apps.apple.com/app/id6744296925">
+        <Image src={appleBadge} alt="Apple Badge" width="173" height="57" />
+      </a>
+      <!-- <a class="has-icon center" href="https://accessible-astro.incluud.dev/">
+        <Image src={googleBadge} alt="Google Badge" width="173" height="57" />
+      </a> -->
+    </div>
   </div>
 </div>
 
@@ -60,10 +66,10 @@ const {
     display: flex;
     align-items: center;
     gap: var(--space-2xs);
-    border: 3px solid var(--color-neutral-900);
-    border-radius: var(--radius-s);
+    // border: 3px solid var(--color-neutral-900);
+    // border-radius: var(--radius-s);
     padding: var(--space-s);
-    color: var(--color-neutral-900);
+    // color: var(--color-neutral-900);
     font-weight: bold;
     text-decoration: none;
 
@@ -74,13 +80,13 @@ const {
     }
 
     &:where(:hover, :focus) {
-      background-color: var(--color-neutral-900);
-      color: var(--color-neutral-100);
-      text-decoration: underline;
+      // background-color: var(--color-neutral-900);
+      // color: var(--color-neutral-100);
+      // text-decoration: underline;
 
-      [data-icon] {
-        translate: 5px 0;
-      }
+      // [data-icon] {
+      //   translate: 5px 0;
+      // }
     }
   }
 </style>
