@@ -7,6 +7,7 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = 'Astro',
+  subtitle = 'Accessible Astro Starter',
   description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
   url = Astro.site,
   image = 'social-preview-image.png',
@@ -23,7 +24,7 @@ const {
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/wextlab-favicon.ico" />
 
-    <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
+    <SiteMeta title={title} subtitle={subtitle} description={description.substring(0, 100)} url={url} image={image} author={author} />
   </head>
   <body>
     <Header />

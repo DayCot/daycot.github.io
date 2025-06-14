@@ -12,6 +12,10 @@ interface Props {
    */
   title: string
   /**
+   * The subtitle of the page
+   */
+  subtitle: string
+  /**
    * The description of the page
    */
   description: string
@@ -29,9 +33,7 @@ interface Props {
   author?: string
 }
 
-const { title, description, url, image, author = 'Mark Teekman' } = Astro.props
-
-let subtitle = 'Accessible Astro Starter'
+const { title, subtitle, description, url, image, author = 'Minho Yi' } = Astro.props
 ---
 
 <!-- general meta -->
